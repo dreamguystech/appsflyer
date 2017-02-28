@@ -71,7 +71,7 @@ app.controller('AppsFlyerCtrl', function (
     }
 
 
-    function initSdk() {
+    function initSdk() { alert(11);
         var options = {
             devKey: 'WdpTVAcYwmxsaQ4WeTspmh',
             isDebug: true , // (optional, default - false)
@@ -96,7 +96,7 @@ app.controller('AppsFlyerCtrl', function (
 
 
                     },
-                    function errorCB(_error) {
+                    function errorCB(_error) { alert(_error);
                         $timeout(function () {
                             $scope.viewModel.initSdkResponse = _response;
                         }, 1);
