@@ -50,7 +50,9 @@ app.directive('rowDataDirective', function ($timeout) {
             
             
             scope.$watch('data', function (newVal, oldVal) {
-
+                
+                scope.localData = newVal;
+                
                 if (newVal !== oldVal) {
                     scope.onDataChange(newVal);
 
