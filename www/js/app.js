@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 var app = angular.module('starter', ['ionic'])
 
-app.run(function($ionicPlatform, $rootScope, $timeout) {
+app.run(function($ionicPlatform, $rootScope, $timeout) { 
     
     $rootScope.isAndroid = false;
     $rootScope.isIOS     = false; 
