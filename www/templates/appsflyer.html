@@ -23,20 +23,20 @@
             on-click="onClick(data)">                
         </row-data-directive>
         
-        <row-data-directive ng-if="$root.isIOS === true"
+        <row-data-directive 
             button-text="trackLocation"
             data='viewModel.trackLocation'
             on-click="onClick(data)">                
         </row-data-directive>
         
         
-        <row-data-directive ng-if="$root.isAndroid === true"
+        <row-data-directive 
             button-text="setGCMProjectID"
             data='viewModel.gcmProjectIDResponse'
             on-click="onClick(data)">                
         </row-data-directive>
 
-<!--        <pre>$root.isAndroid 2: {{$root.isAndroid}}</pre>-->
+<!--        <pre>{{viewModel.initSdkResponse}}</pre>-->
         
     </ion-content>
 </ion-pane>

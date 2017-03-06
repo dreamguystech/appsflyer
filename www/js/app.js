@@ -5,11 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 var app = angular.module('starter', ['ionic'])
 
-app.run(function($ionicPlatform, $rootScope, $timeout) { 
-    
-    $rootScope.isAndroid = false;
-    $rootScope.isIOS     = false; 
-    
+app.run(function($ionicPlatform, $rootScope) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -25,14 +21,6 @@ app.run(function($ionicPlatform, $rootScope, $timeout) {
       StatusBar.styleDefault();
     }
     
-    
-        $timeout(function () {
-            $rootScope.isAndroid = ionic.Platform.isAndroid();
-            $rootScope.isIOS = ionic.Platform.isIOS();
-        }, 0);
-    
-    
-
      $rootScope.$broadcast("ionicPlatformReady", {});   
   });
 });
