@@ -50,7 +50,7 @@ var app = {
 document.addEventListener("deviceready", function(){
 
    var options = {
-             devKey:  'R2auco6oYUUpsnk9tunUQA',
+             devKey:  'xxxxXxxxXxxxxXXx8',
              isDebug: true,
             onInstallConversionDataListener: true
            };
@@ -63,7 +63,7 @@ document.addEventListener("deviceready", function(){
     window.plugins.appsFlyer.initSdk(options);
     window.plugins.appsFlyer.setGCMProjectID("YOUR_GCM_PROJECT_ID");
 
-    /*var push = PushNotification.init({
+    var push = PushNotification.init({
     android: {
         senderID: "12345"
     },
@@ -76,13 +76,13 @@ document.addEventListener("deviceready", function(){
         sound: "true"
     },
     windows: {}
-    });*/
+    });
     //Device Token for iOS
-    /*push.on('registration', function(data) {
+    push.on('registration', function(data) {
         console.log("device token: "+data.registrationId);
         window.plugins.appsFlyer.registerUninstall(data.registrationId);
     });
-*/
+
 
 
 }, false);
